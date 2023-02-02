@@ -1,0 +1,18 @@
+[package]
+name = "att-state-pda-design"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+no-entrypoint = ["solitaire/no-entrypoint"]
+trace = ["solitaire/trace"]
+
+
+[dependencies]
+borsh = "0.9.3"
+solana-program = "=1.10.31"
+solitaire = {git = "https://github.com/wormhole-foundation/wormhole", rev = "v2.8.9"}
